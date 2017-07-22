@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <h1 class="main-title"><i class="fa fa-book"></i> My Blog</h1>
+        <hr>
+        {% for post in posts %}
+        <article class="post clearfix">
+            <h2 class="post-title"><a href="{% url 'post_detail' post_id=post.id %}">{{post.title}}</a></h2>
+            <p class="post-body">
+                {{post.body|truncatewords:"25"|safe}}
+            </p>
+            <a href="{% url 'post_detail' post_id=post.id %}" class="readmore-link"><i class="fa fa-external-link"></i> Read more</a>
+            <small class="post-date">{{post.post_date}} &nbsp;<i class="fa fa-calendar"></i></small>
+            <hr>
+        </article>
+        {% endfor %}
+    </section>
+{% endblock %}
