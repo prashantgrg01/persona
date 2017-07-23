@@ -9,9 +9,9 @@
         <article class="post details clearfix">
             <h2 class="post-title">{{post.title}}</h2>
             <p class="post-author">by <span>{{post.author}}</span> on {{post.post_date}} &nbsp;<i class="fa fa-calendar"></i></p>
-            <p class="post-body">
-                {{post.body|safe|linebreaksbr}}
-            </p>
+            <section class="post-body">
+                {{post.body|safe|linebreaks}}
+            </section>
             <hr>
             <a href="{% url 'post_list' %}" class="btn-main"><i class="fa fa-mail-reply"></i> Back to Blogs</a>
         </article>
