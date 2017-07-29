@@ -23,15 +23,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ob2-do^#vo9u6#^dvn#wzv11uf*%3xh)lwtf_2^cpo7bj3a(z%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["pgrg.pythonanywhere.com"]
+ALLOWED_HOSTS = ["pgrg.pythonanywhere.com", "localhost"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'blog',
+    'getpaper',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
