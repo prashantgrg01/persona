@@ -18,6 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include("blog.urls")),
-    url(r'^appms/', include("getpaper.urls"))
+    url(r'^', include("blog.urls"))
 ]

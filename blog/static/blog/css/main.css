@@ -206,8 +206,11 @@ pre {
     line-height: 2.5rem;
     font-size: 1.7rem;
 }
-.post > .post-body strong, .post > .post-body em {
+.post > .post-body b, .post > .post-body strong, .post > .post-body em {
     font-weight: 400;
+}
+.post > .post-body u {
+    text-decoration: underline;	
 }
 .readmore-link {
     font-weight: 400;

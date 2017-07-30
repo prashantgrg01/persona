@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ["pgrg.pythonanywhere.com"]
 
 INSTALLED_APPS = [
     'blog',
-    'getpaper',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
