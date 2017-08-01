@@ -1,3 +1,3 @@
 # persona
 
-# My own personal portfolio and blog website
+My own personal portfolio and blog website.
