@@ -135,16 +135,12 @@ pre {
     -o-transition: all 250ms ease-out;
     transition: all 250ms ease-out;
 }
-.intro-nav a.active {
-    color: gold;
+.intro-nav a:hover {
+    color: gold !important;
     font-weight: 400;
 }
-.intro-nav a.active > .nav-arrow {
-    color: gold;
-    margin-left: 2rem;
-}
 .intro-nav a:hover > .nav-arrow, .intro-nav a:active > .nav-arrow {
-    color: #49bf9d;
+    color: gold;
     margin-left: 2rem;
 }
 /** Responsive Navigation **/
@@ -175,8 +171,8 @@ pre {
     display: block;
     font-size: 2rem;
 }
-.responsive-menu a.active {
-    color: gold;
+.responsive-menu a:hover {
+    color: gold !important;
     font-weight: 400;
 }
 /** Footer **/

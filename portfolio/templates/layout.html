@@ -55,36 +55,20 @@
                             <h3><span class="fa fa-navicon fa-lg"> MENU</span></h3>
                         </div>
                         <ul class="responsive-menu">
-                            {% if page == 'home' %}
-                            <li><a href="/#home" class="active"><i class="fa fa-home"></i> Home</a></li>
-                            {% else %}
                             <li><a href="/#home"><i class="fa fa-home"></i> Home</a></li>
-                            {% endif %}
                             <li><a href="/#about"><i class="fa fa-user-circle-o"></i> About</a></li>
                             <li><a href="/#portfolio"><i class="fa fa-trophy"></i> Portfolio</a></li>
-                            {% if page == 'blog' %}
-                            <li><a href="/blog" class="active"><i class="fa fa-book"></i> Blog</a></li>
-                            {% else %}
                             <li><a href="/blog"><i class="fa fa-book"></i> Blog</a></li>
-                            {% endif %}
                         </ul>
                     </nav>
                     
                     <!-- Main Navigation -->
                     <nav class="intro-nav visible-md visible-lg">
                         <ul>
-                            {% if page == 'home' %}
-                            <li><a href="/#home" class="active"><i class="fa fa-home"></i> Home <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
-                            {% else %}
                             <li><a href="/#home"><i class="fa fa-home"></i> Home <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
-                            {% endif %}
                             <li><a href="/#about"><i class="fa fa-user-circle-o"></i> About <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
                             <li><a href="/#portfolio"><i class="fa fa-trophy"></i> Portfolio <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
-                            {% if page == 'blog' %}
-                            <li><a href="/blog" class="active"><i class="fa fa-book"></i> Blog <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
-                            {% else %}
                             <li><a href="/blog"><i class="fa fa-book"></i> Blog <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
-                            {% endif %}
                         </ul>
                     </nav>
 
@@ -170,24 +154,6 @@
             
             $(".lightbox").on("click", function() {
                 $(this).fadeOut(300);
-            });
-
-            //Window Scroll Function And Scrollspy implementation
-            $(window).scroll(function() {               
-                //Scrollspy function
-                var offsetTop = 0;
-                if ($(this).scrollTop() >= $("#home").offset().top - offsetTop) {
-                    $("nav a.active").removeClass("active");
-                    $("nav a[href='/#home']").addClass("active");  
-                }
-                if ($(this).scrollTop() >= $("#about").offset().top - offsetTop) {
-                    $("nav a.active").removeClass("active");
-                    $("nav a[href='/#about']").addClass("active");
-                } 
-                if ($(this).scrollTop() >= $("#portfolio").offset().top - offsetTop) {
-                    $("nav a.active").removeClass("active");
-                    $("nav a[href='/#portfolio']").addClass("active");
-                }
             });
 
             // Add smooth scrolling to all links
