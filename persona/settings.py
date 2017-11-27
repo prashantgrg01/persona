@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["pgrg.pythonanywhere.com"]
 # Application definition
 
 INSTALLED_APPS = [
+    'portfolio',
     'blog',
     'django.contrib.admin',
     'django.contrib.auth',

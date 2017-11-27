@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>:: Persona ::</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    {% load staticfiles %}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link href="http://csshake.surge.sh/csshake.min.css" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!-- Lightbox area -->
+        <div class="lightbox">
+            <img src="#" class="img-responsive">
+        </div>
+
+        <div class="row">
+            <!-- Header Section -->
+            <header class="col-md-3 col-lg-3 header-container">
+                <div class="row">
+                    <!-- Introduction -->
+                    <section class="intro">
+                        <div class="avatar shake-chunk shake-constant">
+                            
+                        </div>
+                        <div class="clearfix"></div>
+                        <h3 class="intro-title">
+                            <strong>Hi! I am Prashant,</strong><br>
+                            a student from Kathmandu, Nepal.
+                        </h3>
+                    </section>
+
+                    <!-- Responsive Navigation -->
+                    <nav class="responsive-nav hidden-md hidden-lg">
+                        <div class="responsive-menu-btn">
+                            <h3><span class="fa fa-navicon fa-lg"> MENU</span></h3>
+                        </div>
+                        <ul class="responsive-menu">
+                            {% if page == 'home' %}
+                            <li><a href="/#home" class="active"><i class="fa fa-home"></i> Home</a></li>
+                            {% else %}
+                            <li><a href="/#home"><i class="fa fa-home"></i> Home</a></li>
+                            {% endif %}
+                            <li><a href="/#about"><i class="fa fa-user-circle-o"></i> About</a></li>
+                            <li><a href="/#portfolio"><i class="fa fa-trophy"></i> Portfolio</a></li>
+                            {% if page == 'blog' %}
+                            <li><a href="/blog" class="active"><i class="fa fa-book"></i> Blog</a></li>
+                            {% else %}
+                            <li><a href="/blog"><i class="fa fa-book"></i> Blog</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    
+                    <!-- Main Navigation -->
+                    <nav class="intro-nav visible-md visible-lg">
+                        <ul>
+                            {% if page == 'home' %}
+                            <li><a href="/#home" class="active"><i class="fa fa-home"></i> Home <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
+                            {% else %}
+                            <li><a href="/#home"><i class="fa fa-home"></i> Home <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
+                            {% endif %}
+                            <li><a href="/#about"><i class="fa fa-user-circle-o"></i> About <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
+                            <li><a href="/#portfolio"><i class="fa fa-trophy"></i> Portfolio <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
+                            {% if page == 'blog' %}
+                            <li><a href="/blog" class="active"><i class="fa fa-book"></i> Blog <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
+                            {% else %}
+                            <li><a href="/blog"><i class="fa fa-book"></i> Blog <i class="fa fa-angle-double-right nav-arrow"></i></a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+
+                    <!-- Header Footer -->
+                    <footer class="header-footer visible-md visible-lg">
+                        <h3 class="find-me-text">Find Me On:</h3>
+                        <section class="social-icons">
+                            <a href="https://github.com/prashantgrg01" target="_blank"><i class="fa fa-github"></i></a>
+                            <a href="https://codepen.io/prashantgrg01" target="_blank"><i class="fa fa-codepen"></i></a>
+                            <a href="https://www.freecodecamp.org/prashantgrg01" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+                            <a href="https://www.facebook.com/prashant.grg.7" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </section>
+                        <p>
+                            <small>
+                                &copy pgrg.pythonanywhere.com &nbsp;&nbsp;|&nbsp;&nbsp; 
+                                @<a href="https://github.com/prashantgrg01" target="_blank" class="author-link">prashantgrg01</a>
+                            </small>
+                        </p>
+                    </footer>
+                </div>
+            </header>
+            
+            <!-- Main Content Section -->
+            <section class="col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3 main-container" id="home">
+                <div class="row">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </section>
+
+            <!-- Main Footer -->
+            <footer class="main-footer hidden-md hidden-lg">
+                <h3 class="find-me-text">Find Me On:</h3>
+                <section class="social-icons">
+                    <a href="https://github.com/prashantgrg01" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://codepen.io/prashantgrg01" target="_blank"><i class="fa fa-codepen"></i></a>
+                    <a href="https://www.freecodecamp.org/prashantgrg01" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+                    <a href="https://www.facebook.com/prashant.grg.7" target="_blank"><i class="fa fa-facebook"></i></a>
+                </section>
+                <p>
+                    <small>
+                        &copy pgrg.pythonanywhere.com &nbsp;&nbsp;|&nbsp;&nbsp; 
+                        @<a href="https://github.com/prashantgrg01" target="_blank" class="author-link">prashantgrg01</a>
+                    </small>
+                </p>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add initial animations
+            $(".container-fluid").addClass("animated fadeIn");
+            $(".header-container").addClass("animated slideInLeft");
+            $(".gallery img").addClass("animated rotateIn");
+
+            // Remove the gallery image animations after 1.5s delay
+            window.setTimeout(removeImageAnimations, 1500);
+            function removeImageAnimations() {
+                $(".gallery img").removeClass("animated rotateIn");
+            }
+
+            // Code to toggle the responsive navigation menu for mobile devices
+            $(".responsive-menu").hide();
+            $(".responsive-menu-btn").click(function() {
+                $(".responsive-menu").slideToggle(300);
+            });
+
+            //Lightbox effect
+            var curImg;
+            $("img.lb-toggle").on("click", function() {
+                var imgSource = $(this).attr("src");
+                $(".lightbox > img").attr("src", imgSource);
+                $(".lightbox").fadeIn(300);
+                curImg = $(this);
+                //console.log(curImg);
+            });
+            
+            $(".lightbox").on("click", function() {
+                $(this).fadeOut(300);
+            });
+
+            //Window Scroll Function And Scrollspy implementation
+            $(window).scroll(function() {               
+                //Scrollspy function
+                var offsetTop = 0;
+                if ($(this).scrollTop() >= $("#home").offset().top - offsetTop) {
+                    $("nav a.active").removeClass("active");
+                    $("nav a[href='/#home']").addClass("active");  
+                }
+                if ($(this).scrollTop() >= $("#about").offset().top - offsetTop) {
+                    $("nav a.active").removeClass("active");
+                    $("nav a[href='/#about']").addClass("active");
+                } 
+                if ($(this).scrollTop() >= $("#portfolio").offset().top - offsetTop) {
+                    $("nav a.active").removeClass("active");
+                    $("nav a[href='/#portfolio']").addClass("active");
+                }
+            });
+
+            // Add smooth scrolling to all links
+            $("nav a").click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                        scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
+            });
+  
+        });
+    </script>
+  </body>
+</html>

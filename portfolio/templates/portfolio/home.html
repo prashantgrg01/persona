@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+<section class="main-content">
+    <div class="home">
+
+        <section class="gallery">
+            <ul class="row">
+                <li class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive img-thumbnail lb-toggle" src="{% static 'img/g1.jpg' %}">
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive img-thumbnail lb-toggle" src="{% static 'img/p1.jpg' %}">
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive img-thumbnail lb-toggle" src="{% static 'img/p2.jpg' %}">
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive img-thumbnail lb-toggle" src="{% static 'img/p3.jpg' %}">
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive img-thumbnail lb-toggle" src="{% static 'img/g2.jpg' %}">
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive img-thumbnail lb-toggle" src="{% static 'img/g3.jpg' %}">
+                </li>
+            </ul>
+        </section>
+
+        <section class="brief-section">
+            <hr>
+            <blockquote class="brief">
+                <p>
+                    I am <strong>Prashant Gurung</strong> 
+                    and I love to <strong class="shake-slow shake-constant">code</strong>, <strong class="shake-little shake-constant">play guitar</strong> and <strong class="shake-opacity shake-constant">learn new things.</strong>
+                </p>
+            </blockquote>
+            <hr>
+        </section>
+    
+        <section class="video-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <iframe class="img-thumbnail" src="https://www.youtube.com/embed/a8QGisOwkc8" frameborder="0" allowfullscreen></iframe>            
+                </div>
+                <div class="col-sm-6">
+                    <iframe class="img-thumbnail" src="https://www.youtube.com/embed/nUVma6e8y4c" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <hr>
+            <h1 class="title-text"><i class="fa fa-user-circle-o"></i> Who am I?</h1>
+            <hr>
+
+            <div class="row">
+                <section class="col-sm-4">
+                    <article class="quality-item">
+                        <img src="{% static 'img/owl.jpg' %}">                
+                        <div class="quality-info">
+                            <p>A night owl who loves to code and howl at night with anything drinkable in his hand!</p>                
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-sm-4">
+                    <article class="quality-item">
+                        <img src="{% static 'img/guitarist.jpg' %}">                
+                        <div class="quality-info">
+                            <p>A music hound who loves to play guitar like a boss and try out other instruments.</p>                
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-sm-4">
+                    <article class="quality-item">
+                        <img src="{% static 'img/movie.png' %}">                
+                        <div class="quality-info">
+                            <p>A sci-fi, action movie fan who loves to see agents in black suits and fictious world of future technologies!</p>                
+                        </div>
+                    </article>
+                </section>
+                
+                <section class="col-sm-4">
+                    <article class="quality-item">
+                        <img src="{% static 'img/dota.jpg' %}">                
+                        <div class="quality-info">
+                            <p>A gamer who enjoys playing DOTA 2 with people from all around the world.</p>                
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-sm-4">
+                    <article class="quality-item">
+                        <img src="{% static 'img/burger.jpg' %}">                
+                        <div class="quality-info">
+                            <p>And, a burger lover. Nothing is more tasty than raw slices of vegetables mixed with a meat slice between two bakery buns.</p>                
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="portfolio">
+            <hr>
+            <h1 class="title-text"><i class="fa fa-trophy"></i> Portfolio</h1>
+            <hr>
+
+            <div class="row">
+                <section class="col-sm-6">
+                    <article class="folio-item">
+                        <div class="folio-img">
+                            <img src="{% static 'img/miniscales.PNG' %}">
+                        </div>
+                        <div class="folio-info">
+                            <h2>Mini Scales</h2>
+                            <p>Minimal Music Scales, Python, Web Application</p>
+                        </div>
+                        <div class="folio-overlay">
+                            <a href="https://miniscales.herokuapp.com/" target="_blank" class="btn-main"><i class="fa fa-external-link"></i> Click to Visit</a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-sm-6">
+                    <article class="folio-item">
+                        <div class="folio-img">
+                            <img src="{% static 'img/qrcode.png' %}">
+                        </div>
+                        <div class="folio-info">
+                            <h2>QTS - Prototype</h2>
+                            <p>QR Code Ticket System, Python, E-commerce, Web Application</p>
+                        </div>
+                        <div class="folio-overlay">
+                            <a href="https://github.com/prashantgrg01/qts" target="_blank" class="btn-main"><i class="fa fa-external-link"></i> Click to Visit</a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-sm-6">
+                    <article class="folio-item">
+                        <div class="folio-img">
+                            <img src="{% static 'img/appms.PNG' %}">
+                        </div>
+                        <div class="folio-info">
+                            <h2>APPMS</h2>
+                            <p>A-Level Past Papers and Mark Schemes Downloader, Python, Web Application</p>
+                        </div>
+                        <div class="folio-overlay">
+                            <a href="http://appms.herokuapp.com/" target="_blank" class="btn-main"><i class="fa fa-external-link"></i> Click to Visit</a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-sm-6">
+                    <article class="folio-item">
+                        <div class="folio-img">
+                            <img src="{% static 'img/minipiano.PNG' %}">
+                        </div>
+                        <div class="folio-info">
+                            <h2>Mini Piano</h2>
+                            <p>Music, JavaScript</p>
+                        </div>
+                        <div class="folio-overlay">
+                            <a href="http://prashantgrg01.github.io/miniPiano/" target="_blank" class="btn-main"><i class="fa fa-external-link"></i> Click to Visit</a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="col-sm-6">
+                    <article class="folio-item">
+                        <div class="folio-img">
+                            <img src="{% static 'img/spelunky.png' %}">
+                        </div>
+                        <div class="folio-info">
+                            <h2>Spelunky Runner</h2>
+                            <p>Infinite Runner, Desktop Game, C#, Unity</p>
+                        </div>
+                        <div class="folio-overlay">
+                            <a href="https://1drv.ms/u/s!ApNZEV2OQuqwjW2XXgxlwEkt1blz" target="_blank" class="btn-main"><i class="fa fa-external-link"></i> Click to Visit</a>
+                        </div>
+                    </article>
+                </section>
+
+            </div>
+        </section>
+    
+    </div>
+</section>
+{% endblock %}
